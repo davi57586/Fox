@@ -6,4 +6,4 @@ end
 
 -- Pega a versão mais nova do GitHub
 loadstring(game:HttpGet('https://raw.githubusercontent.com/davi57586/Fox/refs/heads/main/README.mdtime='..tick()))()
-Fox
+Fox.
