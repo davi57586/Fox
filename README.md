@@ -1,3 +1,12 @@
+local userKey = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("InputBox").Text
+
+if userKey ~= "MINHA_CHAVE123" then
+    return warn("Chave inválida! Você não pode usar este script.")
+end
+
+-- Pega o script ofuscado do GitHub
+loadstring(game:HttpGet('https://raw.githubusercontent.com/seu_usuario/seu_repositorio/main/SCRIPT_READ.lua?time='..tick()))()
+
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local Stats = game:GetService("Stats")
@@ -197,12 +206,3 @@ LocalPlayer.CharacterAdded:Connect(function()
     painel.Visible = true
     barraFechada.Visible = false
 end)
-
-local userKey = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("InputBox").Text
-
-if userKey ~= "MINHA_CHAVE123" then
-    return warn("Chave inválida! Você não pode usar este script.")
-end
-
--- Pega o script ofuscado do GitHub
-loadstring(game:HttpGet('https://raw.githubusercontent.com/seu_usuario/seu_repositorio/main/SCRIPT_READ.lua?time='..tick()))()
