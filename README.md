@@ -1,1 +1,1 @@
-prinf("hell lua")
+hello lua
