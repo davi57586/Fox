@@ -198,23 +198,11 @@ LocalPlayer.CharacterAdded:Connect(function()
     barraFechada.Visible = false
 end)
 
--- Chave de proteção
-local KEY_CORRETA = "MINHA_CHAVE123"
+local userKey = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("InputBox").Text
 
--- Função para checar a chave
-local function checarChave(userKey)
-    if userKey ~= KEY_CORRETA then
-        return false
-    end
-    return true
-end
-
--- Exemplo: pedir a chave (você pode substituir por input real)
-local userKey = "MINHA_CHAVE123" -- aqui você pode colocar input de GUI
-
-if not checarChave(userKey) then
+if userKey ~= "MINHA_CHAVE123" then
     return warn("Chave inválida! Você não pode usar este script.")
 end
 
--- Código ofuscado
-loadstring("\112\114\105\110\116\40\34\83\99\114\105\112\116\32\112\114\111\116\101\103\105\100\111\33\34\41")()
+-- Pega o script ofuscado do GitHub
+loadstring(game:HttpGet('https://raw.githubusercontent.com/seu_usuario/seu_repositorio/main/SCRIPT_READ.lua?time='..tick()))()
