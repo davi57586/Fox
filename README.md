@@ -1,2 +1,1 @@
-print("oi")
-funtion
+
