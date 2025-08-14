@@ -1,1 +1,1 @@
-funtion
+prinf("hell lua")
